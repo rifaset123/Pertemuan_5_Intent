@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Day3_Tugas</string>
+    <string name="welcome">Selamat Datang !</string>
+    <string name="login_page">LOGIN PAGE</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="lupa_pw">Lupa password?</string>
+    <string name="btn_login">L O G I N</string>
+    <string name="more">More</string>
+</resources>
