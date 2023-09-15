@@ -7,4 +7,13 @@
     <string name="lupa_pw">Lupa password?</string>
     <string name="btn_login">L O G I N</string>
     <string name="more">More</string>
+    <string name="register">REGISTER</string>
+    <string name="register_here">Register Here!</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="btn_reg">R E G I S T E R</string>
+    <string name="already_have_account_log_in">Already have Account? Log In!</string>
+    <string name="homepage">HOMEPAGE</string>
+    <string name="biodata">BIODATA</string>
+    <string name="profil">profil</string>
 </resources>

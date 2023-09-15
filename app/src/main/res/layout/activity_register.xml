@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/bg_login"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_register"
+    tools:context=".Register">
 
-    <RelativeLayout
-        android:id="@+id/atas"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_display"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="@string/welcome"
-            android:textColor="@color/white"
-            android:paddingStart="50dp"
-            android:textSize="30sp"/>
-    </RelativeLayout>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
+        app:layout_constraintTop_toBottomOf="@id/guideline_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/atas"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
@@ -48,7 +38,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:paddingTop="60dp"
                 android:paddingBottom="25dp"
-                android:text="@string/login_page"
+                android:text="@string/register"
                 android:textAlignment="center"
                 android:textColor="@color/biru"
                 android:textSize="30sp" />
@@ -59,7 +49,7 @@
                 android:layout_height="45dp"
                 android:layout_below="@+id/title_card"
                 android:layout_marginTop="0dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/custom_editform"
                 android:drawableStart="@drawable/baseline_supervisor_account_24"
                 android:drawablePadding="8dp"
@@ -71,12 +61,12 @@
                 android:paddingEnd="20dp"
                 />
             <EditText
-                android:id="@+id/pass"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_below="@+id/username"
                 android:inputType="textPassword"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/custom_editform"
                 android:drawableStart="@drawable/baseline_lock_24"
@@ -87,78 +77,68 @@
                 android:layout_marginEnd="20dp"
                 android:paddingStart="25dp"
                 android:paddingEnd="20dp" />
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/password"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_editform"
+                android:drawableStart="@drawable/baseline_phone_24"
+                android:drawablePadding="8dp"
+                android:hint="@string/phone"
+                android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="25dp"
+                android:paddingEnd="20dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/phone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_editform"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:hint="@string/email"
+                android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="25dp"
+                android:paddingEnd="20dp" />
 
             <TextView
-                android:id="@+id/register"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pass"
+                android:layout_below="@id/email"
                 android:paddingTop="4dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="@string/register_here"
-                android:paddingStart="45dp"
+                android:text="@string/already_have_account_log_in"
+                android:paddingStart="35dp"
                 android:textColor="@color/biru"
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/btn"
+                android:id="@+id/btn_regis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/register"
-                android:text="@string/btn_login"
-                android:fontFamily="@font/montserrat_bold"
-                android:textSize="15sp"
+                android:layout_below="@id/login"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="40dp"
-                android:backgroundTint="@color/biru"/>
+                android:backgroundTint="@color/biru"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/btn_reg"
+                android:textSize="15sp" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/more"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card_view"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/more"
-        android:textAlignment="center"
-        android:textColor="@color/biru"
-        android:textSize="15sp"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/more">
 
-        <Button
-            android:id="@+id/gmail"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="70dp"
-            android:backgroundTint="@color/biru"
-            android:drawableTop="@drawable/baseline_mark_email_read_24"
-            android:drawableTint="@color/white" />
-
-        <Button
-            android:id="@+id/hp"
-            android:layout_width="70dp"
-            android:layout_toRightOf="@id/gmail"
-            android:layout_height="70dp"
-            android:backgroundTint="@color/biru"
-            android:drawableTint="@color/white"
-            android:layout_marginStart="30dp"
-            android:drawableTop="@drawable/baseline_phone_enabled_24" />
-        <Button
-            android:id="@+id/profile"
-            android:layout_width="70dp"
-            android:layout_toRightOf="@id/hp"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
-            android:backgroundTint="@color/biru"
-            android:drawableTint="@color/white"
-            android:drawableTop="@drawable/baseline_account_circle_24" />
-    </RelativeLayout>
-  </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
